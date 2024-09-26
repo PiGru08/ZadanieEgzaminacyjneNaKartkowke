@@ -1,11 +1,20 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-       Notatka notatka1 = new Notatka("przygotowanie", "przygotowanie do egzaminu");
-       Notatka notatka2 = new Notatka("przygotowanie2", "2 przygotowanie do egzaminu");
-       notatka1.diagnostyczna();
-       notatka2.diagnostyczna();
-       notatka1.wyswietlTresc();
-       notatka2.wyswietlTresc();
+        System.out.println("Wprowadź dwie liczby: ");
+        Scanner klawiatura = new Scanner(System.in);
+        int a = klawiatura.nextInt();
+        int b = klawiatura.nextInt();
+
+        while(a!=b){
+            if(a>b){
+                a=a-b;
+            }else{
+                b = b-a;
+            }
+        }
+        System.out.println("Liczba: "+a+", "+b);
     }
 }
